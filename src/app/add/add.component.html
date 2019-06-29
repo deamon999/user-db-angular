@@ -1,0 +1,28 @@
+<div class="card container jumbotron" style="width: 70%; align-content: center">
+  <h3>Enter User Information</h3>
+  <div class="card-body">
+<!--    <ngForm>-->
+    <form #myForm="ngForm" novalidate>
+      <div class="form-group">
+        <label for="firstName"><b>First Name</b></label>
+        <input type="text" class="form-control" name="firstName" id="firstName" placeholder="John" [(ngModel)]="user.firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName"><b>Last Name</b></label>
+        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Doe" [(ngModel)]="user.lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email"><b>Email address</b></label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" [(ngModel)]="user.email" email required>
+      </div>
+      <div class="form-group">
+        <label for="age"><b>Age</b></label>
+        <input type="number" class="form-control" name="age" id="age" placeholder="10 - 90" [(ngModel)]="user.age" required>
+      </div>
+          </form>
+<!--    </ngForm>-->
+    <button type="button" class="btn btn-success" (click)="addUser()" [disabled]="myForm.invalid">{{ buttonText }}</button>
+    <button type="button" class="btn btn-danger" (click)="clearData()">Clear</button>
+  </div>
+</div>
+

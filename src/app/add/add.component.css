@@ -1,0 +1,10 @@
+.form_container {
+  border-radius: 5px;
+  stroke-width: 2px;
+  border-color: black;
+  padding: 5px;
+}
+
+.btn{
+  margin: 5px;
+}
